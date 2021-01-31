@@ -128,3 +128,4 @@ public class CasDosTiradors extends GestorDePuntuacions {
         return opcio == 1;
     }
 }
+//jo
