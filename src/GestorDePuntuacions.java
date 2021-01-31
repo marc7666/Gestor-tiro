@@ -6,6 +6,8 @@ public class GestorDePuntuacions extends CommandLineProgram {
     public static final String ANSI_RESET = "\u001B[0m";
     public static final String ANSI_CYAN = "\u001B[36m";
     public static final String ANSI_YELLOW = "\u001B[33m";
+    public static final String ANSI_PURPLE = "\u001B[35m";
+    public static final String ANSI_LIGHT_YELLOW = "\u001B[93m";
     public int tiradors;
     public int plats;
 
@@ -15,19 +17,24 @@ public class GestorDePuntuacions extends CommandLineProgram {
     }
 
     public void run() {
+        informacioTirada();
+        if (this.tiradors == 1){
+            CasUnTirador tirador = new CasUnTirador();
+            tirador.realitzarTirada(this.plats);
+        }else if (this.tiradors == 2){
+            CasDosTiradors tirador2 = new CasDosTiradors();
+            tirador2.realitzarTirada(plats);
+        }
+
+    }
+
+    private void informacioTirada() {
         System.out.println(ANSI_CYAN + " ---------- Recollida de dades de la tirada ---------- \n");
         this.plats = readInt(ANSI_RESET + "Indica el nombre de plats de la tirada: ");
         this.tiradors = readInt(ANSI_RESET + "Indica el nombre de tiradors de l'esquadra (màxim 5): ");
         while (!checkTiradros(tiradors)) {
             tiradors = readInt(ANSI_RESET + "Indica el nombre de tiradors de l'esquadra (màxim 5): ");
         }
-        if (this.tiradors == 1){
-            CasUnTirador tirador = new CasUnTirador();
-            tirador.realitzarTirada(this.plats);
-        }else{
-            System.out.println("Algo falla!");
-        }
-
     }
 
     private boolean checkTiradros(int tiradors) {
