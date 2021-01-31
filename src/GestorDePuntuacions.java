@@ -21,10 +21,10 @@ public class GestorDePuntuacions extends CommandLineProgram {
      **/
     public void run() {
         informacioTirada();
-        if (this.tiradors == 1){
+        if (this.tiradors == 1) {
             CasUnTirador tirador = new CasUnTirador();
             tirador.realitzarTirada(this.plats);
-        }else if (this.tiradors == 2){
+        } else if (this.tiradors == 2) {
             CasDosTiradors tirador2 = new CasDosTiradors();
             tirador2.realitzarTirada(plats);
         }
@@ -49,7 +49,6 @@ public class GestorDePuntuacions extends CommandLineProgram {
     private boolean checkTiradros(int tiradors) {
         return tiradors <= 5;
     }
-
 
 
 }
