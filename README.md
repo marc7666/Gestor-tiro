@@ -4,7 +4,7 @@ _GestorDePuntuacions_ = Superclasse
 
 Cas 1 tirador = Subclasse (FET)
 
-Cas 2 tiradors = Subclasse
+Cas 2 tiradors = Subclasse (FET)
 
 Cas 3 tiradors = Subclasse
 

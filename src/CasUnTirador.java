@@ -26,7 +26,7 @@ public class CasUnTirador extends GestorDePuntuacions {
                     fallats++;
                 }
             } else { //És un plat doble
-                i++;
+                i++; //S'ha d'avançar una i mes sino es faria un plat de mes
                 System.out.println(ANSI_YELLOW + " ---------- Plat doble ---------- \n");
                 System.out.println(ANSI_YELLOW + " ---------- Plat primer ---------- \n");
                 if (checkEncert()) {
