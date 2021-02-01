@@ -30,6 +30,9 @@ public class GestorDePuntuacions extends CommandLineProgram {
         }else if (this.tiradors == 3){
             CasTresTiradors tirador3 = new CasTresTiradors();
             tirador3.realitzarTirada(this.plats);
+        }else if (this.tiradors == 4){
+            CasQuatreTiradors tirador4 = new CasQuatreTiradors();
+            tirador4.realitzarTirada(this.plats);
         }
 
     }
