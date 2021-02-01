@@ -30,6 +30,20 @@ public class CasDosTiradors extends GestorDePuntuacions {
             i = tornTirador2(i);
         }
         resultats();
+        declaraGuanyador(trencats1, trencats2);
+    }
+
+    private void declaraGuanyador(int trencatsDelTirador1, int trencatsDelTirador2) {
+        int c = Math.max(trencatsDelTirador1, trencatsDelTirador2);
+        if (c == trencatsDelTirador1){
+            System.out.println(ANSI_CYAN + " ---------- Podi ----------");
+            System.out.println(ANSI_GREEN + "Primera posició: " + ANSI_YELLOW + nom1);
+            System.out.println(ANSI_GREEN + "Segona posició: " + ANSI_YELLOW + nom2);
+        }else {
+            System.out.println(ANSI_CYAN + " ---------- Podi ----------");
+            System.out.println(ANSI_GREEN + "Primera posició: " + ANSI_YELLOW + nom2);
+            System.out.println(ANSI_GREEN + "Segona posició: " + ANSI_YELLOW + nom1);
+        }
     }
 
     /**

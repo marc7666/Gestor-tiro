@@ -12,4 +12,4 @@ Cas 4 tiradors = Subclasse (FET)
 
 Cas 5 tiradors = Subclasse (FET)
 
-Funcions de declaraciod e guanyador segons el nombre de tiradors
+Funcions de declaracio de guanyador segons el nombre de tiradors
