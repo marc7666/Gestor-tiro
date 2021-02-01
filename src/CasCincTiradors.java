@@ -76,35 +76,35 @@ public class CasCincTiradors extends GestorDePuntuacions {
      * Printa els resultats del tirador 5
      **/
     private void resultatsTirador5(int trencats5, int fallats5) {
-        System.out.println(ANSI_RESET + "Tirador: " + nom5 + "\n" + ANSI_GREEN + "Plats trencats: " + trencats5 + ANSI_RED + "\nPlats fallats: " + fallats5);
+        System.out.println(ANSI_LIGHT_YELLOW + " ---------- Tirador: " + nom5 + " ----------\n" + ANSI_GREEN + "Plats trencats: " + trencats5 + ANSI_RED + "\nPlats fallats: " + fallats5);
     }
 
     /**
      * Printa els resultats del tirador 4
      **/
     private void resultatsTirador4(int trencats4, int fallats4) {
-        System.out.println(ANSI_RESET + "Tirador: " + nom4 + "\n" + ANSI_GREEN + "Plats trencats: " + trencats4 + ANSI_RED + "\nPlats fallats: " + fallats4);
+        System.out.println(ANSI_LIGHT_YELLOW + " ---------- Tirador: " + nom4 + " ----------\n" + ANSI_GREEN + "Plats trencats: " + trencats4 + ANSI_RED + "\nPlats fallats: " + fallats4);
     }
 
     /**
      * Printa els resultats del tirador 3
      **/
     private void resultatsTirador3(int trencats3, int fallats3) {
-        System.out.println(ANSI_RESET + "Tirador: " + nom3 + "\n" + ANSI_GREEN + "Plats trencats: " + trencats3 + ANSI_RED + "\nPlats fallats: " + fallats3);
+        System.out.println(ANSI_LIGHT_YELLOW + " ---------- Tirador: " + nom3 + " ----------\n" + ANSI_GREEN + "Plats trencats: " + trencats3 + ANSI_RED + "\nPlats fallats: " + fallats3);
     }
 
     /**
      * Printa els resultats del tirador 2
      **/
     private void resultatsTirador2(int trencats2, int fallats2) {
-        System.out.println(ANSI_RESET + "Tirador: " + nom2 + "\n" + ANSI_GREEN + "Plats trencats: " + trencats2 + ANSI_RED + "\nPlats fallats: " + fallats2);
+        System.out.println(ANSI_LIGHT_YELLOW + " ---------- Tirador: " + nom2 + " ----------\n" + ANSI_GREEN + "Plats trencats: " + trencats2 + ANSI_RED + "\nPlats fallats: " + fallats2);
     }
 
     /**
      * Printa els resultats del tirador 1
      **/
     private void resultatsTirador1(int trencats1, int fallats1) {
-        System.out.println(ANSI_RESET + "Tirador: " + nom1 + "\n" + ANSI_GREEN + "Plats trencats: " + trencats1 + ANSI_RED + "\nPlats fallats: " + fallats1);
+        System.out.println(ANSI_LIGHT_YELLOW + " ---------- Tirador: " + nom1 + " ----------\n" + ANSI_GREEN + "Plats trencats: " + trencats1 + ANSI_RED + "\nPlats fallats: " + fallats1);
     }
 
 

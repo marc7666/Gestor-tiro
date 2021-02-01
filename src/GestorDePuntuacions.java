@@ -1,5 +1,6 @@
 import acm.program.CommandLineProgram;
 
+
 public class GestorDePuntuacions extends CommandLineProgram {
     public static final String ANSI_GREEN = "\u001B[32m";
     public static final String ANSI_RED = "\u001B[31m";
@@ -27,13 +28,13 @@ public class GestorDePuntuacions extends CommandLineProgram {
         } else if (this.tiradors == 2) {
             CasDosTiradors tirador2 = new CasDosTiradors();
             tirador2.realitzarTirada(this.plats);
-        }else if (this.tiradors == 3){
+        } else if (this.tiradors == 3) {
             CasTresTiradors tirador3 = new CasTresTiradors();
             tirador3.realitzarTirada(this.plats);
-        }else if (this.tiradors == 4){
+        } else if (this.tiradors == 4) {
             CasQuatreTiradors tirador4 = new CasQuatreTiradors();
             tirador4.realitzarTirada(this.plats);
-        }else{
+        } else {
             CasCincTiradors tirador5 = new CasCincTiradors();
             tirador5.realitzarTirada(this.plats);
         }
