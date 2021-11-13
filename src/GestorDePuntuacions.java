@@ -60,5 +60,10 @@ public class GestorDePuntuacions extends CommandLineProgram {
         return tiradors <= 5;
     }
 
+    public static void main(String[] args){
+        GestorDePuntuacions g = new GestorDePuntuacions();
+        g.run();
+    }
+
 
 }
