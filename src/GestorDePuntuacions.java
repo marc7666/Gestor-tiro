@@ -42,9 +42,12 @@ public class GestorDePuntuacions extends CommandLineProgram {
         } else if (this.tiradors == 4) {
             CasQuatreTiradors tirador4 = new CasQuatreTiradors();
             tirador4.realitzarTirada(this.plats);
-        } else {
+        } else if (this.tiradors == 5){
             CasCincTiradors tirador5 = new CasCincTiradors();
             tirador5.realitzarTirada(this.plats);
+        }else if (this.tiradors == 6){
+            CasSisTiradors tirador6 = new CasSisTiradors();
+            tirador6.realitzarTirada(this.plats);
         }
 
     }
