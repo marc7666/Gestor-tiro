@@ -1,3 +1,5 @@
+import Excepcions.TooFewShootersException;
+import Excepcions.TooManyShootersException;
 import acm.program.CommandLineProgram;
 
 
@@ -21,7 +23,13 @@ public class GestorDePuntuacions extends CommandLineProgram {
      * Mètode d'execució del programa principal
      **/
     public void run() {
-        informacioTirada();
+        try {
+            informacioTirada();
+        } catch (TooFewShootersException e) {
+            e.printStackTrace();
+        } catch (TooManyShootersException e) {
+            e.printStackTrace();
+        }
         if (this.tiradors == 1) {
             CasUnTirador tirador = new CasUnTirador();
             tirador.realitzarTirada(this.plats);
@@ -44,23 +52,19 @@ public class GestorDePuntuacions extends CommandLineProgram {
     /**
      * Recollida d'informació de la tirada
      **/
-    private void informacioTirada() {
+    private void informacioTirada() throws TooFewShootersException, TooManyShootersException {
         System.out.println(ANSI_CYAN + " ---------- Recollida de dades de la tirada ---------- \n");
         this.plats = readInt(ANSI_RESET + "Indica el nombre de plats de la tirada: ");
         this.tiradors = readInt(ANSI_RESET + "Indica el nombre de tiradors de l'esquadra (màxim 5): ");
-        while (!checkTiradros(tiradors)) {
-            tiradors = readInt(ANSI_RESET + "Indica el nombre de tiradors de l'esquadra (màxim 5): ");
+        if (tiradors <= 0) {
+            throw new TooFewShootersException("El nombre introduït de tiradors es massa baix!");
+        } else if (tiradors > 6) {
+            throw new TooManyShootersException("El nombre introduït de tiradors es massa elevat!");
         }
     }
 
-    /**
-     * True si el nombre de tiradors es <= 5. False en cas contrari.
-     **/
-    private boolean checkTiradros(int tiradors) {
-        return tiradors <= 5;
-    }
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         GestorDePuntuacions g = new GestorDePuntuacions();
         g.run();
     }
