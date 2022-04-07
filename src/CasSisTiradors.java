@@ -107,8 +107,9 @@ public class CasSisTiradors extends GestorDePuntuacions {
         this.nom5 = readLine("Escriu el nom del tirador de la posicio 5: ");
         this.nom6 = readLine("Escriu el nom del tirador reserva: ");
         addTorns();
+        boolean acabar = false;
         System.out.println(ANSI_CYAN + " ---------- Comença la tirada amb 6 tiradors. Es prega silenci ---------- \n");
-        while (platN < plats) {
+        while (platN <= plats && !acabar) {
             for (int i = 0; i < torns1.length - 1; i++) {
                 System.out.println(ANSI_PURPLE + " ---------- Torn del tirador 1 (" + nom1 + ") ----------");
                 tornTirador1();
@@ -197,6 +198,9 @@ public class CasSisTiradors extends GestorDePuntuacions {
                 tornTirador6();
             }
             platN += 25;
+            if (acabarTirada()) {
+                break;
+            }
         }
         resultats();
     }
@@ -431,6 +435,12 @@ public class CasSisTiradors extends GestorDePuntuacions {
      **/
     private boolean checkTipusPlat() {
         String opcio = readLine(ANSI_RESET + "Escriu 'si' si es un plat senzill. 'No' en cas contrari\n");
+        String opcio2 = "Si";
+        return opcio.equalsIgnoreCase(opcio2);
+    }
+
+    private boolean acabarTirada() {
+        String opcio = readLine("Vols acabar la tirada i imprimir els resultats? ");
         String opcio2 = "Si";
         return opcio.equalsIgnoreCase(opcio2);
     }
