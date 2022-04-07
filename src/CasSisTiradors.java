@@ -439,6 +439,9 @@ public class CasSisTiradors extends GestorDePuntuacions {
         return opcio.equalsIgnoreCase(opcio2);
     }
 
+    /**
+     * True en cas de "si". False en cas contrari
+     **/
     private boolean acabarTirada() {
         String opcio = readLine("Vols acabar la tirada i imprimir els resultats? ");
         String opcio2 = "Si";

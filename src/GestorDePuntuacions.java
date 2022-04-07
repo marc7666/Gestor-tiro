@@ -42,10 +42,10 @@ public class GestorDePuntuacions extends CommandLineProgram {
         } else if (this.tiradors == 4) {
             CasQuatreTiradors tirador4 = new CasQuatreTiradors();
             tirador4.realitzarTirada(this.plats);
-        } else if (this.tiradors == 5){
+        } else if (this.tiradors == 5) {
             CasCincTiradors tirador5 = new CasCincTiradors();
             tirador5.realitzarTirada(this.plats);
-        }else if (this.tiradors == 6){
+        } else if (this.tiradors == 6) {
             CasSisTiradors tirador6 = new CasSisTiradors();
             tirador6.realitzarTirada(this.plats);
         }
@@ -58,7 +58,7 @@ public class GestorDePuntuacions extends CommandLineProgram {
     private void informacioTirada() throws TooFewShootersException, TooManyShootersException {
         System.out.println(ANSI_CYAN + " ---------- Recollida de dades de la tirada ---------- \n");
         this.plats = readInt(ANSI_RESET + "Indica el nombre de plats de la tirada: ");
-        this.tiradors = readInt(ANSI_RESET + "Indica el nombre de tiradors de l'esquadra (màxim 5): ");
+        this.tiradors = readInt(ANSI_RESET + "Indica el nombre de tiradors de l'esquadra (màxim 6): ");
         if (tiradors <= 0) {
             throw new TooFewShootersException("El nombre introduït de tiradors es massa baix!");
         } else if (tiradors > 6) {
